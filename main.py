@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import datetime as dt
 
 
-ticker = "TSLA"                   # Stock Symbol used in the market.
+ticker = "GME"                   # Stock Symbol used in the market.
 
 
 start = dt.datetime(2020,1,1)
@@ -88,7 +88,9 @@ combined = pd.DataFrame()
 
 combined['Adj Close'] = data['Adj Close']
 
-combined['rsi'] = rsi
+
+combined['rsi'] = rsi                        # "rsi" is itself a series of values (a DataFrame object).   ( Remember, we took the running sum of the differences and also the mean simultaneously to calculate the average_gain and the average_loss)
+
 
 
 plt.figure(figsize = (12, 8))
@@ -104,6 +106,7 @@ axis_1.plot(combined.index, combined["Adj Close"], color = "lightgray")         
 axis_1.set_title("Closing Share Price", color = "white")
 
 
+
 axis_1.grid(True, color = "#555555")             # Yes, we want gridlines on the graph.
 
 
@@ -113,7 +116,8 @@ axis_1.set_axisbelow(True)
 
 axis_1.set_facecolor("black")
 
-axis_1.tick_params(axis = "x", colors = "black")                # Highlight the axis "x" parameters (numbers)
+
+axis_1.tick_params(axis = "x", colors = "white")                # Highlight the axis "x" parameters (numbers)
 
 
 axis_1.tick_params(axis = "y", colors = "black")                  # Highlight the axis "y" parameters (numbers)
@@ -169,7 +173,7 @@ axis_2.axhline(100, linestyle = "--", alpha = 0.5, color = "#ff0000")
 
 
 
-axis_2.set_title("Relative Strength Index", color = "White")
+axis_2.set_title("Relative Strength Index", color = "black")
 
 
 axis_2.grid(False)             # No, we don't want gridlines on the graph.
