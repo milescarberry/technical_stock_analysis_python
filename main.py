@@ -103,7 +103,7 @@ axis_1 = plt.subplot(211)
 axis_1.plot(combined.index, combined["Adj Close"], color = "lightgray")                  # combined.index refers to the dates. (time)  (x_axis)
 
 
-axis_1.set_title("Closing Share Price", color = "white")
+axis_1.set_title("Closing Share Price", color = "black")
 
 
 
@@ -117,7 +117,7 @@ axis_1.set_axisbelow(True)
 axis_1.set_facecolor("black")
 
 
-axis_1.tick_params(axis = "x", colors = "white")                # Highlight the axis "x" parameters (numbers)
+axis_1.tick_params(axis = "x", colors = "black")                # Highlight the axis "x" parameters (numbers)
 
 
 axis_1.tick_params(axis = "y", colors = "black")                  # Highlight the axis "y" parameters (numbers)
